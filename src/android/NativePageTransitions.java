@@ -40,30 +40,14 @@ public class NativePageTransitions extends CordovaPlugin {
   // this plugin listens to page changes, so only kick in a transition when it was actually requested by the JS bridge
   private String lastCallbackID;
 
-  class MyCordovaWebViewClient extends CordovaWebViewClient {
-    public MyCordovaWebViewClient(CordovaInterface cordova, CordovaWebView view) {
-      super(cordova, view);
-    }
 
-    @Override
-    public void onPageFinished(WebView view, String url) {
-      super.onPageFinished(view, url);
-      if ("slide".equalsIgnoreCase(_action)) {
-        doSlideTransition();
-      } else if ("flip".equalsIgnoreCase(_action)) {
-        doFlipTransition();
-      } else if ("drawer".equalsIgnoreCase(_action)) {
-        doDrawerTransition();
-      }
-    }
-  }
 
   @Override
   public void initialize(CordovaInterface cordova, CordovaWebView webView) {
     super.initialize(cordova, webView);
     // required when a href is passed to better control the transition timing
     // TODO may be replaced by a 'load' listener (but that doesnt work for hashnav)
-    webView.setWebViewClient(new MyCordovaWebViewClient(cordova, webView));
+    
     imageView = new ImageView(cordova.getActivity().getBaseContext());
     imageView2 = new ImageView(cordova.getActivity().getBaseContext());
 
