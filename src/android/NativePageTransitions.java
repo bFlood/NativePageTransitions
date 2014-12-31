@@ -10,7 +10,13 @@ import android.webkit.WebView;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import com.telerik.plugins.nativepagetransitions.lib.AnimationFactory;
-
+import org.apache.cordova.CallbackContext;
+import org.apache.cordova.CordovaInterface;
+import org.apache.cordova.CordovaPlugin;
+import org.apache.cordova.CordovaWebView;
+import org.apache.cordova.PluginEntry;
+import org.apache.cordova.PluginResult;
+import org.apache.cordova.ScrollEvent;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
