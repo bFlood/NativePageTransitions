@@ -10,7 +10,7 @@ import android.webkit.WebView;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import com.telerik.plugins.nativepagetransitions.lib.AnimationFactory;
-import org.apache.cordova.*;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
