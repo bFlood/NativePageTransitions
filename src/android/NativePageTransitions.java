@@ -127,7 +127,7 @@ public class NativePageTransitions extends CordovaPlugin {
 
           if (href != null && !"null".equals(href)) {
             if (!href.startsWith("#") && href.contains(".html")) {
-              webView.loadUrlIntoView(HREF_PREFIX + href, false);
+              webView.loadUrl(HREF_PREFIX + href);
             } else {
               // it's a #hash
               String url = webView.getUrl();
@@ -135,7 +135,7 @@ public class NativePageTransitions extends CordovaPlugin {
               if (url.contains("#")) {
                 url = url.substring(0, url.indexOf("#"));
               }
-              webView.loadUrlIntoView(url + href, false);
+              webView.loadUrl(url + href);
             }
           } else {
             doSlideTransition();
@@ -190,7 +190,7 @@ public class NativePageTransitions extends CordovaPlugin {
 
           if (href != null && !"null".equals(href)) {
             if (!href.startsWith("#") && href.contains(".html")) {
-              webView.loadUrlIntoView(HREF_PREFIX + href, false);
+              webView.loadUrl(HREF_PREFIX + href);
             } else {
               // it's a #hash
               String url = webView.getUrl();
@@ -198,7 +198,7 @@ public class NativePageTransitions extends CordovaPlugin {
               if (url.contains("#")) {
                 url = url.substring(0, url.indexOf("#"));
               }
-              webView.loadUrlIntoView(url + href, false);
+              webView.loadUrl(url + href);
             }
           } else {
             doDrawerTransition();
@@ -225,7 +225,7 @@ public class NativePageTransitions extends CordovaPlugin {
 
           if (href != null && !"null".equals(href)) {
             if (!href.startsWith("#") && href.contains(".html")) {
-              webView.loadUrlIntoView(HREF_PREFIX + href, false);
+              webView.loadUrl(HREF_PREFIX + href);
             } else {
               // it's a #hash
               String url = webView.getUrl();
@@ -233,7 +233,7 @@ public class NativePageTransitions extends CordovaPlugin {
               if (url.contains("#")) {
                 url = url.substring(0, url.indexOf("#"));
               }
-              webView.loadUrlIntoView(url + href, false);
+              webView.loadUrl(url + href);
             }
           } else {
             doFlipTransition();
